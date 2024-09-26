@@ -1,15 +1,15 @@
 import React from 'react'
 import {useState ,useEffect} from "react"
- const API_KEY = "y3l7S69GdxtutBNhpFY1sKCVRrCvcEpelJodECVY"
+
 const Nasa = () => {
  
     const [nasaData, setNasaData] = useState([])
     const [count , setCount] = useState(0)
-
+    const api = import.meta.env.VITE_API_KEY
 
   
     async function showNext(){
-        const url = `https://api.nasa.gov/planetary/apod?count=100&api_key=${API_KEY}`
+        const url = `https://api.nasa.gov/planetary/apod?count=100&api_key=${api}`
         const response = await fetch(url)
         const data = await response.json()
         setCount(prev => prev + 1)
