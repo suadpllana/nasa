@@ -1,19 +1,71 @@
 body{
   text-align: center;
-  background-color: rgb(29, 29, 141);
+
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 .container{
-  width: 40%;
-  margin-left: 30%;
-  background-color: wheat;
-border-radius: 20px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+}
+.container h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  width: 30%;
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid black;
+  min-height: 30px;
+  height: auto;
+} 
+.container .description{
+  line-height: 1.5;
 }
 .container img {
-  width: 70%;
-  height: 200px;
-  border-radius: 20px;
+  width: 100%;
+  max-height: 100vh;
+
+}
+.next , .info , .prev{
+  position: absolute;
+  color: white;
+}
+.container .next{
+
+  right: 30px;
+ 
+}
+.container .prev , .container .next{
+  top: 45%;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+.container .prev{
+ 
+  left: 30px;
+  
+}
+.container .info{
+  bottom: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;;
+}
+.container .sidebar{
+  width: 350px;
+  
+  position: fixed;
+  background-color: black;
+  height: 100vh;
+  overflow-y: scroll;
+  right: 0;
+  color: white;
+}
+.container .closeSidebar{
+  cursor: pointer;
 }
 .container button {
   background-color: darkgreen;
@@ -34,10 +86,19 @@ border-radius: 20px;
     width: 100%;
     margin-left: 0;
   }
+  .container .sidebar{
+    width: 100%
+  }
+  .container h2{
+    width: 60%;
+  }
 }
 @media (min-width: 768px) and (max-width: 1217px){
   .container{
-    width: 60%;
-    margin-left: 20%;
+    width: 100%;
+    margin-left: 0%;
+  }
+  .container h2{
+    width: 40%;
   }
 }
