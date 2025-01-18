@@ -3,6 +3,7 @@ import {useState ,useEffect} from "react"
 import { FaCircleInfo } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
 import { FaArrowLeft } from "react-icons/fa";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 const Nasa = () => {
  
     const [nasaData, setNasaData] = useState([])
@@ -50,7 +51,7 @@ const Nasa = () => {
   return (
     <>
     {loading ? 
-      <h1>Loading Data...</h1>
+      <AiOutlineLoading3Quarters  className="loading"/>
      : 
       <div className="container">
        
